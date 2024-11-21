@@ -12,7 +12,7 @@
     --color-green-200: #216869;
 
     --color-gradient: linear-gradient(90deg, var(--color-green-200), var(--color-green-100),
-     var(--color-green-50));
+            var(--color-green-50));
 }
 
 * {
@@ -30,12 +30,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 25px;
 }
 
 #register_form {
     background-color: var(--color-light-50);
     display: flex;
     flex-direction: column;
+    width: 680px;
+    max-width: 100%;
     padding: 30px 40px;
     border-radius: 8px;
     gap: 30px;
@@ -58,7 +61,7 @@
 #header_box h1::before {
     position: absolute;
     content: '';
-    width: 21%;
+    width: 27%;
     background-color: var(--color-green-50);
     height: 3px;
     bottom: 10px;
@@ -73,42 +76,46 @@
 #inputs {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
     gap: 20px;
 }
 
-.row_inputs {
+#simple_inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 250px));
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+.input_box {
     display: flex;
-    flex-direction: row;
-    gap: 89px;
+    flex-direction: column;
+    width: 100%;
 }
 
 .input_box label {
+    font-size: 14px;
     color: var(--color-dark-50);
-    font-size: 12px;
 }
 
 .input_field {
     display: flex;
     align-items: center;
+    gap: 15px;
     padding: 3px;
     cursor: text;
     border-bottom: 1px solid var(--color-green-50);
 }
 
-#input_field_gender {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--color-green-50);
-    font-weight: 300;
+.input_field i {
+    font-size: 15px;
+    color: var(--color-dark-900);
 }
 
 .input_field input {
     border: none;
     background-color: transparent;
-    width: 250px;
+    width: 100%;
     font-size: 18px;
     padding: 0px 5px;
 }
@@ -117,8 +124,13 @@
     outline: none;
 }
 
-#date {
-    color: var(--color-dark-50);
+#gender_box {
+    gap: 3px;
+}
+
+#input_field_gender {
+    display: flex;
+    justify-content: space-between;
 }
 
 #register_button {
@@ -127,7 +139,7 @@
     color: var(--color-light-50);
     padding: 7px;
     font-size: 18px;
-    border-radius: 3px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -156,7 +168,8 @@
     animation: light-to-dark 0.1s ease-in-out;
 }
 
-.dark#register_form .input_field input, .dark#register_form .input_field i {
+.dark#register_form .input_field input,
+.dark#register_form .input_field i {
     color: var(--color-light-50);
 }
 
@@ -177,5 +190,28 @@
 
     100% {
         background-color: var(--color-dark-100);
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    #container {
+        height: 100%;
+    }
+
+    #simple_inputs {
+        grid-template-columns: 1fr;
+    }
+
+    #input_field_gender {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #header_box {
+        flex-direction: column;
+        gap: 12px;
     }
 }

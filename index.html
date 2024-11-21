@@ -14,32 +14,31 @@
     <main id="container">
         <form id="register_form">
             <div id="header_box">
-                <h1>Registre-se</h1>
+                <h1>Registrar</h1>
+
                 <i id="mode_moon" class="fa-solid fa-moon"></i>
             </div>
 
             <div id="inputs">
-                <div class="row_inputs">
+                <div id="simple_inputs">
                     <div class="input_box">
-                        <label for="name">
-                            Nome:
+                        <label for="full_name">
+                            Nome completo:
                         </label>
                         <div class="input_field">
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="full_name" id="full_name">
                         </div>
                     </div>
 
                     <div class="input_box">
-                        <label for="surname">
-                            Sobrenome:
+                        <label for="cpf">
+                            CPF:
                         </label>
                         <div class="input_field">
-                            <input type="text" name="surname" id="surname">
+                            <input type="text" name="cpf" id="cpf">
                         </div>
                     </div>
-                </div>
 
-                <div class="row_inputs">
                     <div class="input_box">
                         <label for="email">
                             E-mail:
@@ -51,36 +50,31 @@
 
                     <div class="input_box">
                         <label for="phone">
-                            Celular:
+                            Telefone:
                         </label>
                         <div class="input_field">
-                            <input type="tel" name="phone" id="phone" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}"
-                             placeholder="Ex.: (xx) 9xxxx-xxxx">
+                            <input type="tel" name="phone" id="phone">
                         </div>
                     </div>
-                </div>
 
-                <div class="row_inputs">
                     <div class="input_box">
-                        <label for="name">
+                        <label for="username">
                             Usuário:
                         </label>
                         <div class="input_field">
-                            <input type="text" name="user" id="user">
+                            <input type="text" name="username" id="username">
                         </div>
                     </div>
 
-                    <div class="input_box" id="date_box">
-                        <label for="date">
+                    <div class="input_box">
+                        <label for="birth_date">
                             Data de nascimento:
                         </label>
                         <div class="input_field">
-                            <input type="date" name="date" id="date">
+                            <input type="date" name="birth_date" id="birth_date">
                         </div>
                     </div>
-                </div>
 
-                <div class="row_inputs">
                     <div class="input_box">
                         <label for="password">
                             Senha:
@@ -91,53 +85,52 @@
                     </div>
 
                     <div class="input_box">
-                        <label for="confPass">
+                        <label for="confirm_password">
                             Confirmar senha:
                         </label>
                         <div class="input_field">
-                            <input type="password" name="confPass" id="confPass">
+                            <input type="password" name="confirm_password" id="confirm_password">
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div class="input_box">
-                        <label for="gender">
-                            Gênero:
-                        </label>
-                        <div id="input_field_gender">
-                            <div class="gender_input">
-                                <input type="radio" name="gender" id="male">
-                                <label for="male">Masculino</label>
-                            </div>
+                <div id="gender_box" class="input_box">
+                    <label for="gender">
+                        Gênero:
+                    </label>
 
-                            <div class="gender_input">
-                                <input type="radio" name="gender" id="female">
-                                <label for="female">Feminino</label>
-                            </div>
+                    <div id="input_field_gender">
+                        <div class="gender_input">
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Masculino</label>
+                        </div>
 
-                            <div class="gender_input">
-                                <input type="radio" name="gender" id="other">
-                                <label for="other">Outro</label>
-                            </div>
+                        <div class="gender_input">
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Feminino</label>
+                        </div>
 
-                            <div class="gender_input">
-                                <input type="radio" name="gender" id="none">
-                                <label for="none">Prefiro não dizer</label>
-                            </div>
+                        <div class="gender_input">
+                            <input type="radio" name="gender" id="other">
+                            <label for="other">Outro</label>
+                        </div>
+
+                        <div class="gender_input">
+                            <input type="radio" name="gender" id="none">
+                            <label for="none">Prefiro não dizer</label>
                         </div>
                     </div>
                 </div>
             </div>
 
             <button type="submit" id="register_button">
-                Registrar-se
+                Registrar
             </button>
         </form>
 
         <div id="login">
-            Já tem uma conta? 
-            <a href="#" target="_blank">
+            Já possui uma conta?
+            <a href="https://login-screen-ochre.vercel.app/" target="_blank">
                 Entrar
             </a>
         </div>
